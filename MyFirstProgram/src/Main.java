@@ -27,6 +27,15 @@ public class Main {
 		}
 	}
 	
+	public static class Dog extends Pet{
+		public String Address;
+		public Dog(String name, int age, String breed, String owner, String address) {
+			//Here, we are using the "super" keyword to invoke parent class constructor --> NOTE: We MUST put the parent class constructor in the first line of the subclass constructor, THEN we can add any additional fields we want for the subclass constructor
+			super(name, age, breed, owner);
+				this.Address = address;
+		}
+	}
+	
 	public static class Human{
 		public String Name;
 		
@@ -93,17 +102,21 @@ public class Main {
 	static abstract class Amway {
 		String Name;
 		int Age;
-		public String Leader = "Bipin";
+		public String Leader = "King";
 		
 		public Amway(String name, int age) {
 			this.Name = name;
 			this.Age = age;
 		}
 		public abstract void freedomCall();
+		
+		public void singleMethod() {
+			System.out.println("Parent method used with super keyword");
+		}
 	}
 	
 	public static class IBO extends Amway {
-		public String Leader = "Ashi";
+		public String Leader = "Queen";
 		public IBO(String name, int age) {
 			//NOTE: Here, we are using the Superclass constructor to instatiate an object using the IBO Class that extends from the Amway (Parent) Class --> We MUST use the "super" keyword and use the same parameters
 			super(name, age);
@@ -113,8 +126,11 @@ public class Main {
 			System.out.println(Leader);
 			//Using the "super" keyword to access immediate parent class instance variable
 			System.out.println(super.Leader);
+			//Using the "super" keyword to access immediate parent class method
+			super.singleMethod();
 		}
 	}
+	
 
 	//main method of the Main Class that gets compiled when we run our program --> Anything inside this method gets compiled and becomes output to the Console
 	public static void main(String[] args) {
@@ -196,6 +212,26 @@ public class Main {
 		}
 		System.out.println(sum);
 		
+		Dog awesomeDog = new Dog("name", 10, "breed", "owner", "address");
+		System.out.println(awesomeDog.Address);
+		
+		//The "final" keyword: 1.Stops value change, 2.Stops method overriding, 3.Stops inheritance
+		final String lastname = "Jimenez";
+		System.out.println(lastname);
+		//lastname = "Quiroz";
+		//System.out.println(lastname);
+		
+		//Creating a String object using the String Class by using a constructor that takes an array of character literals (individual characters --> NOTE: For character literals we use single quotes)
+		char [] helloArray = {'h', 'e', 'l', 'l', 'o'};
+		String helloString = new String(helloArray);
+		System.out.println(helloString);
+		helloString = "hi";
+		System.out.println(helloString);
+		
+		//Accessor Methods: Methods used to obtain information about an object --> To obtain the length of a String object is the length() method --> Spaces are also included in the length count because they occupy space
+		String palindrome = "Dot saw I was Tod";
+		int len = palindrome.length();
+		System.out.println("String length is: " + len);
 		
 		
 	}
