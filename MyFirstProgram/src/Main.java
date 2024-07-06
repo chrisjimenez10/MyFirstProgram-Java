@@ -1,3 +1,6 @@
+//Importing packages: We can use the "import" keyword followed by the package name, then dot "." and then asterisk to indicate that we are IMPORTING EVERYTHING from the package (Except subpackages) --> NOTE: We can then simply use any Class or Interface from the exporting package
+import SecondPackage.*;
+import SecondPackage.Second.B;
 //IMPORTANT: The syntax format for declaring a Class, Method, or Field with multiple modifiers follows the following order: 1.Access Modifiers (private, default, protected, public), 2.Non-access modifiers (abstract, static, final, synchronized, native, volatile, transient), 3.Return Type (for Methods) - Type (for Fields)
 public class Main {
 	//When we are creating our own Classes within the Main Class, we need to assign the static keyword so we can use the Pet Class without having to instantiate the Main Class
@@ -233,7 +236,31 @@ public class Main {
 		int len = palindrome.length();
 		System.out.println("String length is: " + len);
 		
+		//String Concatenation: The String Class includes a method for concatenating two strings - concat() --> We can also use the concat() method with string literals --> Most COMMON way is to use the "+" operator
+		String stringOne = "hello";
+		String stringTwo = "Hello";
+		System.out.println(stringOne.concat(" " + stringTwo));
+		System.out.println("What's up ".concat("Person"));
 		
+		//The charAt() method: Returns character at specified index
+		System.out.println(stringOne.charAt(1));
+		//The compareTo() method: Returns integer after compares if one object is less than, equal, or greater than the other --> Negative = less than, Zero = equal, Positive = greater than
+		System.out.println(stringOne.compareTo(stringTwo));
+		//The equals() method: Returns boolean comparing equality of String objects
+		System.out.println(stringOne.equals(stringTwo));
+		//The equalsIgnoreCase() method: Compares string objects ignoring case sensitivity and returns boolean
+		System.out.println(stringOne.equalsIgnoreCase(stringTwo));
+		
+		//Here, we are using the B Class, which is being imported from the "SecondPackage" package --> import statement at the top of file
+		B humanoid = new B("Wendy", 23);
+		humanoid.greeting();
+		
+		//We can also use the FULLY QUALIFIED NAME: With this convention, we don't need the import keyword, but we NEED to use this fully qualified name every time we try to access a Class from another package --> NOTE: Use dot notation to access nested Classes and their static methods
+		ThirdPackage.Third.fullyQualifiedName();
+		
+		//Using another Class file from the SAME package --> NOTE: We don't need an import statement and simply use it like if it were declared INSIDE this Class file
+		SubMain.notification();
+				
 	}
 
 }
