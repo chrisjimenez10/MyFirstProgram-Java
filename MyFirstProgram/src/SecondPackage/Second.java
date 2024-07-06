@@ -2,6 +2,7 @@ package SecondPackage;
 
 public class Second {
 	
+	//This Class is being exported and imported INTO Main.java using the "import" keyword - name of package ("SecondPackage") - dot (.) - Asterisk (*)
 	public static class B {
 		public String name;
 		public int age;
