@@ -18,6 +18,11 @@ public class SubMain {
 		guest.amazingCelebration();
 		guest.greeting();
 		guest.amazingGreeting();
+		
+		ThirdInterface.CousinClass cousinGuest = new ThirdInterface.CousinClass();
+		cousinGuest.cousinMethod();
+		cousinGuest.amazingCelebration();
+		cousinGuest.amazingGreeting();
 
 	}
 
