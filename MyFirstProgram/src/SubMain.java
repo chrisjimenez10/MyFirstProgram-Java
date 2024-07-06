@@ -62,6 +62,16 @@ public class SubMain {
 			System.out.println("First element vale: " + a[0]);
 		}
 		
+		//Creating Arrays
+			//Declaration and Instantiation of an Array: When we instantiate an array, we assign the number of elements it will have (Arrays have a limit amount of elements, but we can use the collection framework to allow the array to grow its size at runtime
+		int instantiatedArray[] = new int[3]; //Declaration + Instantiation
+		instantiatedArray[0] = 2; //Initialization (Here, we are giving value to the element stored an index position 0
+		instantiatedArray[1] = 4;
+		instantiatedArray[2] = 6;
+		//Looping through the array
+		for(int i = 0; i < instantiatedArray.length; i++) {
+			System.out.println(instantiatedArray[i]);
+		}
 	
 
 	}
