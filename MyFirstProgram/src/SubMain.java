@@ -24,6 +24,7 @@ public class SubMain {
 		cousinGuest.cousinMethod();
 		cousinGuest.amazingCelebration();
 		cousinGuest.amazingGreeting();
+		cousinGuest.listMethod("Chris Jimenez ---");
 		
 		//Exceptions: Exceptions are objects that wrap an error event when it occurs within a method and contains - 1.Information about the error, including its type, 2.The state of the program when the error occurred, 3.Optionally, other custom information --> Categories of Exceptions: 1.Checked, 2.Unchecked, 3.Errors 
 		//Checked Exceptions: Compiler enforces us to handle these exceptions explicitly - Methods that generate Checked Exceptions MUST declare that they "throw" them
@@ -72,6 +73,8 @@ public class SubMain {
 		for(int i = 0; i < instantiatedArray.length; i++) {
 			System.out.println(instantiatedArray[i]);
 		}
+		
+		
 	
 
 	}

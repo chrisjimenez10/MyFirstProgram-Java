@@ -10,6 +10,10 @@ public interface ThirdInterface {
 		void amazingCelebration();
 	}
 	
+	public interface ListInterface {
+		void listMethod(String name);
+	}
+	
 	public static class Party implements ChildInterface {
 		public void greeting() {
 			System.out.println("Hello");
@@ -31,7 +35,10 @@ public interface ThirdInterface {
 		void cousinMethod();
 	}
 	
-	public static class CousinClass implements CousinInterface{
+	public static class CousinClass implements CousinInterface, ListInterface{
+		public void listMethod(String name) {
+			System.out.println("My name is " + name);
+		}
 		public void cousinMethod() {
 			System.out.println("I am cousin method");
 		}
