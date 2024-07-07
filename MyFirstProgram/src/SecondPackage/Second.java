@@ -37,6 +37,15 @@ public class Second {
 		public String getName() {
 			return this.name;
 		}
+		public void announce() {
+			System.out.println("Announcement");
+		}
+	}
+	
+	public static class C2 extends C{
+		public void announce() {
+			super.announce();
+		}
 	}
 	
 	//Interface: Interfaces are implicitly abstract - Each method is also implicitly abstract (abstract keyword NOT necessary) - Methods in an interface are implicitly public --> ALL methods are abstract and any instance fields MUST have the "static" and "final" keywords --> Interfaces DO NOT have: 1.Constructors, 2.CANNOT instantiate an Interface --> Interfaces are IMPLEMENTED by Classes, NOT EXTENDED - Interfaces can EXTEND multiple interfaces --> This here is a NESTED interface, but we can also have an Interface File like any other Class File
@@ -81,6 +90,9 @@ public class Second {
 		testing.setC(99.9);
 		System.out.println(testing.intelligence);
 		System.out.println(testing.getName());
+		
+		C2 firstC = new C2();
+		firstC.announce();
 		
 
 	}

@@ -56,6 +56,26 @@ public class Third {
 		linkedList.add("Two");
 		System.out.println("My LinkedList is: " + linkedList);
 		
+		//HashMap: It's a part of Collections framework and stores data in key-value pairs by implementing the Map interface and using a hash table to store the data - Features: 1.Key-Value Pair Storage, 2.Unique Keys, 3.Null Values (allows one null key and multiple null values), 4.Unordered Data Structure, 5.O(1) time complexity for get()/put() operations due to hashing --> NOTE: Ensure when creating/instantiating a HashMap that we also include the Data Type of both the KEYS and VALUES (The same goes for ArrayList, LinkedList)
+		HashMap<String, Integer> firstMap = new HashMap<String, Integer>();
+		//Common methods for HashMaps: 1.put(key, value) 2.get(key), 3.remove(key), 4.containsKey(key) = searches for existence of key in map and returns boolean, 5.containsValue(value) = searches for existence of value in map and returns boolean, 6.size() = returns number of key-value mappings, 7.clear() = removes ALL mappings from the map
+		firstMap.put("One", 1);
+		firstMap.put("Two", 2);
+		System.out.println(firstMap.get("One")); 
+		System.out.println(firstMap.containsKey("Two"));
+		System.out.println(firstMap.containsValue(3));
+		System.out.println(firstMap.size());
+//		firstMap.clear();
+		System.out.println(firstMap);
+		
+		//HashSet: It's a part of Collections framework and used to store UNIQUE ELEMENTS (It implements the Set interface) - It uses a hash table for storage - Features: 1.Unique Elements (NO Duplicates), 2.Null Values (allows ONE null value), 3.Unordered Data  Structure --> Common Methods: 1.add(), 2.remove(Object o), 3.contains(Object o), 4.size() = returns number of elements in the set, 5.clear() = removes ALL elements from the set
+		HashSet<String> firstHashSet = new HashSet<String>();
+		firstHashSet.add("Library");
+		firstHashSet.add("City");
+		firstHashSet.add("City"); //Ignored because HashSet implements the Set interface, which PROHIBITS holding duplicate elements (Only Unique collections)
+		firstHashSet.remove("City");
+		System.out.println(firstHashSet);
+		
 	}
 	
 }

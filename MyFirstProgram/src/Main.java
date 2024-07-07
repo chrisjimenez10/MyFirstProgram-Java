@@ -260,6 +260,10 @@ public class Main {
 		
 		//Using another Class file from the SAME package --> NOTE: We don't need an import statement and simply use it like if it were declared INSIDE this Class file
 		SubMain.notification();
+		
+		Pet numberPet = new Pet();
+		numberPet.Name = "RRRRR";
+		System.out.println(numberPet.Name);
 				
 	}
 
