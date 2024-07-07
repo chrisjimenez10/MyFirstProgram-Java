@@ -34,7 +34,7 @@ public class Third {
 		System.out.println("I used the get() method to get: " + name);
 		
 		//The set() method replaces an element at the index position with another element we give it
-		String replacingElement = al.set(0, "I replaced you");
+		al.set(0, "I replaced you");
 		System.out.println(al);
 		
 		ArrayList<Integer> el = new ArrayList<Integer>();
@@ -56,7 +56,7 @@ public class Third {
 		linkedList.add("Two");
 		System.out.println("My LinkedList is: " + linkedList);
 		
-		//HashMap: It's a part of Collections framework and stores data in key-value pairs by implementing the Map interface and using a hash table to store the data - Features: 1.Key-Value Pair Storage, 2.Unique Keys, 3.Null Values (allows one null key and multiple null values), 4.Unordered Data Structure, 5.O(1) time complexity for get()/put() operations due to hashing --> NOTE: Ensure when creating/instantiating a HashMap that we also include the Data Type of both the KEYS and VALUES (The same goes for ArrayList, LinkedList)
+		//HashMap: It's a part of Collections framework and stores data in key-value pairs by implementing the Map interface and using a hash table to store the data - Features: 1.Key-Value Pair Storage, 2.Unique Keys, 3.Null Values (allows one null key and multiple null values), 4.Unordered Data Structure, 5.O(1) time complexity for get()/put() operations due to hashing --> NOTE: Ensure when creating/instantiating a HashMap that we also include the Data Type of both the KEYS and VALUES (The same goes for ArrayList, LinkedList) --> This is the "Wrapper Class", which wraps primitive data types inside objects so we can store them
 		HashMap<String, Integer> firstMap = new HashMap<String, Integer>();
 		//Common methods for HashMaps: 1.put(key, value) 2.get(key), 3.remove(key), 4.containsKey(key) = searches for existence of key in map and returns boolean, 5.containsValue(value) = searches for existence of value in map and returns boolean, 6.size() = returns number of key-value mappings, 7.clear() = removes ALL mappings from the map
 		firstMap.put("One", 1);
@@ -75,6 +75,19 @@ public class Third {
 		firstHashSet.add("City"); //Ignored because HashSet implements the Set interface, which PROHIBITS holding duplicate elements (Only Unique collections)
 		firstHashSet.remove("City");
 		System.out.println(firstHashSet);
+		
+		//Multi-Dimensional Array
+		int [][] matrix = {
+				{1,2,3},
+				{4,5,6},
+				{7,8,9}
+		};
+		System.out.println(matrix[0][0]);
+		
+		String a[] = new String[2];
+		a[0] = "Chris";
+		a[1] = "Crisao";
+		System.out.println(a[1]);
 		
 	}
 	
